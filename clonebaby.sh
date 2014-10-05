@@ -19,7 +19,7 @@ brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-# Install Bash 4
+# Install Bash 4 (Hello Shellshock)
 brew install bash
 
 # Install more recent versions of some OS X tools
@@ -44,8 +44,6 @@ brew install ${binaries[@]}
 # Install Cask
 brew install caskroom/cask/brew-cask
 
-echo "Cleaning up brews.."
-
 # Remove outdated versions from the cellar
 brew cleanup
 
@@ -53,24 +51,24 @@ apps=(
   alfred
   dropbox
   google-chrome
-  qlcolorcode
-  slack
   firefox
-  qlmarkdown
   spotify
+  java
+  virtualbox
   vagrant
   flash
   shiori
   sublime-text3
-  virtualbox
   atom
   flux
   mailbox
-  qlstephen
   vlc
-  quicklook-json
   transmission
-  java
+  slack
+  qlcolorcode
+  quicklook-json
+  qlmarkdown
+  qlstephen
 )
 
 # Adding beta versions
@@ -88,6 +86,7 @@ curl -L http://install.ohmyz.sh | sh
 echo export PATH='/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH' >> ~/.zshrc # <- TODO: Make idempotent
 
 #TODO: Dotfiles
+echo "Setting up VIM"
 cp -R dotfiles/.vim* ~
 
 #TODO: Terminal colors
