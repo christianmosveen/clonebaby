@@ -54,13 +54,8 @@ apps=(
   firefox
   spotify
   java
-  virtualbox
-  vagrant
-  flash
-  shiori
   sublime-text3
   atom
-  flux
   mailbox
   vlc
   transmission
@@ -69,6 +64,9 @@ apps=(
   quicklook-json
   qlmarkdown
   qlstephen
+  intellij-idea
+  fantastical
+  heroku-toolbelt
 )
 
 # Adding beta versions
@@ -89,8 +87,14 @@ echo export PATH='/usr/local/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH
 echo "Setting up VIM"
 cp -R dotfiles/.vim* ~
 
+echo "Settings.."
+defaults write com.apple.systemsound 'com.apple.sound.uiaudio.enabled' -int 0
+defaults write com.apple.finder AppleShowAllFiles YES
+defaults write -g InitialKeyRepeat -int 20
+defaults write -g KeyRepeat -int 1
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 #TODO: Terminal colors
-#TODO: Settings (keyboard delay++)
 #TODO: Clean up zsh aliases
 
 exit 0
