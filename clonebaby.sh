@@ -67,6 +67,8 @@ apps=(
   intellij-idea
   fantastical
   heroku-toolbelt
+  iterm2
+  dockertoolbox
 )
 
 # Adding beta versions
