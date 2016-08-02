@@ -56,7 +56,6 @@ apps=(
   java
   sublime-text3
   atom
-  mailbox
   vlc
   transmission
   slack
