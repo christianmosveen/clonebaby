@@ -54,7 +54,7 @@ apps=(
   firefox
   spotify
   java
-  sublime-text3
+  sublime
   atom
   vlc
   transmission
@@ -64,21 +64,15 @@ apps=(
   qlmarkdown
   qlstephen
   intellij-idea
-  fantastical
-  heroku-toolbelt
   iterm2
-  dockertoolbox
+  docker-toolbox
 )
 
 # Adding beta versions
 brew tap caskroom/versions
 
 echo "Installing apps.."
-brew cask install --appdir="/Applications" ${apps[@]}
-
-# Linking Alfred to your casks
-open /Applications/Alfred\ 2.app
-brew cask alfred link
+brew cask install ${apps[@]}
 
 echo "Setting up zsh"
 curl -L http://install.ohmyz.sh | sh
