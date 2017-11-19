@@ -22,14 +22,9 @@ brew install findutils
 # Install Bash 4 (Hello Shellshock)
 brew install bash
 
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-
 # Install other useful binaries
 binaries=(
   python
-  sshfs
   tree
   ack
   git
@@ -42,7 +37,7 @@ binaries=(
 brew install ${binaries[@]}
 
 # Install Cask
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -54,7 +49,7 @@ apps=(
   firefox
   spotify
   java
-  sublime
+  sublime-text
   atom
   vlc
   transmission
@@ -66,6 +61,7 @@ apps=(
   intellij-idea
   iterm2
   docker-toolbox
+  polymail
 )
 
 # Adding beta versions
@@ -84,13 +80,20 @@ cp -R dotfiles/.vim* ~
 
 echo "Settings.."
 defaults write com.apple.systemsound 'com.apple.sound.uiaudio.enabled' -int 0
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -bool false
 defaults write com.apple.finder AppleShowAllFiles YES
+
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 1
+
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 2
+
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-#TODO: Terminal colors
+defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock autohide -bool true
+killall Dock
+
 #TODO: Clean up zsh aliases
 
 exit 0
-
