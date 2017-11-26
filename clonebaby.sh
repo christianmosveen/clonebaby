@@ -31,6 +31,7 @@ binaries=(
   hub
   node
   maven
+  tldr
 )
 
 # Install the binaries
