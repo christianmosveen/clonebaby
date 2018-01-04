@@ -95,6 +95,8 @@ defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock autohide -bool true
 killall Dock
 
+curl -s "https://get.sdkman.io" | sh
+
 #TODO: Clean up zsh aliases
 
 exit 0
