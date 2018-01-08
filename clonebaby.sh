@@ -61,7 +61,6 @@ apps=(
   qlstephen
   intellij-idea
   iterm2
-  docker-toolbox
   polymail
 )
 
